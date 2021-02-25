@@ -1,9 +1,11 @@
+from json import dump
 from flask import Flask,render_template,request,url_for,redirect
 import data
 import xlrd
 from flask_pymongo import PyMongo
 from decouple import config
 import datetime
+from bson.json_util import dumps
 
 app = Flask(__name__ )
 

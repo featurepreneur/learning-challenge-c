@@ -13,14 +13,13 @@
             <h1><center><strong> <i>Learning Challenge</i></strong></center></h1>
         </div>
     <div class="row">
-        
         {%for i in data%}
         <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center" id="img1">
-            <a   href='/crowdengine/{{i["Actress Name"]}}'  style="text-decoration: none; color:black">
+            <a   href='/crowdengine/{{i.name}}'  style="text-decoration: none; color:black">
             <div class="card" style="width: 18rem;">
                 <div class="card-body" >
                 
-                    <center>{{i['Actress Name']}}</center>
+                    <center>{{i.name}}</center>
                 </div>
             </div>
         </a>
