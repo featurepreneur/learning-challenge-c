@@ -3,3 +3,6 @@ Flask==1.1.2
 gunicorn
 dnspython
 pandas
+flask_pymongo 
+decouple
+xlrd

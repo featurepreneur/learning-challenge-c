@@ -8,13 +8,11 @@ db = client['CrowdEngine']
 doc = db['actress']
 client.close()
 
-
 movieslist = list(doc.find({'Actress Name': { '$exists': 'true' } },{'_id':0})) #list(doc.find({'movie': { '$exists': 'true' } },{'movie':1,'_id':0}))
 
 #movieslist =  [i['Actress Name'] for i in movieslist]
 #movieslist = list(set(movieslist))
 size = len(movieslist)
-
 
 def page(pg , index):
 
