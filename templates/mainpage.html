@@ -1,0 +1,39 @@
+
+{%extends 'base.html' %}
+
+{%block head%}
+
+<style>
+.cd{
+    background-color: rgba(245, 245, 245, 0.2);
+}
+</style>
+<div class="container">
+    <div class="card cd" style="width: 100%;transform: none;">
+        <div class="card-header " style="color:white">
+            <h1><center><strong> <i>Actress</i></strong></center></h1>
+        </div>
+    <div class="row">
+        
+        {%for i in movie_list%}
+        <div class="col-xxl-3  col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center" id="img1">
+            <a   href='/crowdengine/{{i["Actress Name"]}}'  style="text-decoration: none; color:black">
+            <div class="card" style="width: 18rem;">
+                <img src="{{i['Image']}}"class="card-img-top " alt="a">
+                <div class="card-body" >
+                
+                    <center>{{i['Actress Name']}}</center>
+                </div>
+            </div>
+        </a>
+        </div>
+    
+        {%endfor%}
+      
+    </div>
+
+</div>
+</div>
+
+
+{%endblock%}

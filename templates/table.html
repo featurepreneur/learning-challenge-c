@@ -1,0 +1,85 @@
+{%extends "base.html"%}
+
+{%block head%}
+
+<div class="modal " id="exampleModal" tabindex="-1" style="width: 40%">
+  <div class="modal-dialog" >
+  <div class="modal-content">
+      <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Data</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+     
+     <div class="modal-body">
+      <p>Name:        <span id = "actressname"></span></p>
+      <p>Entry Link:  <span id = "moviecount"></span></p>
+      <p>Content:     <span id = "screenduration"></span></p>
+      <p>Added at:    <span id = "instagramfollowers"></span></p>
+      
+      </div>
+      
+      </div>
+     
+      
+  </div>
+  </div>
+</div>
+
+
+<div class="container" style="background-color: aliceblue;">
+<table class="table table-hover">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Actress Name</th>
+          <th scope="col">Movie Count</th>
+          <th scope="col">Screen Duration</th>
+          <th scope="col">Instagram Followers</th>
+          <th scope="col">Dress Match Meter</th>
+          <th scope="col">Consistency</th>
+          <th scope="col">Critic Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%for i in  range(data|length)%}
+        <tr onclick="btnfun(this)">
+          <th scope="row" >{{i+1}}</th>
+          <td>{{data[i]['Actress Name']}}</td>
+          <td>{{data[i]['Movie Count']}}</td>
+          <td>{{data[i]['Screen Duration']}}</td>
+          <td>{{data[i]['Instagram Followers']}}</td>
+          <td>{{data[i]['Dress match meter']}}</td>
+          <td>{{data[i]['Consistency']}}</td>
+          <td>{{data[i]['Critic Score']}}</td>
+        </tr>
+        {%endfor%}
+      </tbody>
+  </table>
+</div>
+<script>
+  //jQuery(".a").find("td:eq(1)").text();
+var myModal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
+function btnfun(data)
+{
+  document.getElementById("actressname").innerText=data.getElementsByTagName("td")[0].innerHTML;
+    document.getElementById("actressname").innerText=data.getElementsByTagName("td")[0].innerHTML;
+    document.getElementById("moviecount").innerHTML=data.getElementsByTagName("td")[1].innerHTML;
+    document.getElementById("screenduration").innerHTML=data.getElementsByTagName("td")[2].innerHTML;
+    document.getElementById("instagramfollowers").innerHTML=data.getElementsByTagName("td")[3].innerHTML;
+    document.getElementById("dressmatchmeter").innerHTML=data.getElementsByTagName("td")[4].innerHTML;
+    document.getElementById("consistency").innerHTML=data.getElementsByTagName("td")[5].innerHTML;
+    document.getElementById("criticscore").innerHTML=data.getElementsByTagName("td")[6].innerHTML;
+    
+    a();
+}
+
+
+
+function a () {
+         myModal.show();
+    };
+   
+
+</script>
+
+{%endblock%}

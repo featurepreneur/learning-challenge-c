@@ -1,0 +1,47 @@
+-----------------
+HackathonTime:
+Learning Challenge Crowd Engine scoring system:
+Gmail/Github Login should be used
+Without logging, i shoud be able to give score
+IP should be stored in the DB
+All entries should be dumped from Excel/CSV to MongoDB
+Tables:
+Learning_Challenge_Entries:
+	Name	
+	EntryLink	(unique)
+	Content	
+	Added_at
+LCEntry_Score:
+	LCE_id
+	Scorer_ip	 (unique)
+	Scorer_email (unique)
+	Score
+	Added_at
+https://www.linkedin.com/posts/charliecsr15_50daysofcode-50dayslearningchallenge-learningchallenge-activity-6770402296141611009-Ve8P
+https://www.linkedin.com/posts/charliecsr15_50daysofcode-50dayslearningchallenge-learningchallenge-activity-6770019621832675328-QFG2
+https://www.linkedin.com/posts/charliecsr15_50daysofcode-50dayslearningchallenge-learningchallenge-activity-6768886539129892864-2ssy
+https://www.linkedin.com/posts/sharmila-s22_50dayslearningchallenge-learning-featurepreneur-activity-6770386881910845440-YvqP
+https://www.linkedin.com/posts/sharmila-s22_50dayslearningchallenge-learning-featurepreneur-activity-6770007484909395968-Nfa5
+https://www.linkedin.com/posts/sharmila-s22_50dayslearningchallenge-learning-featurepreneur-activity-6769653959620669440-LcdA
+https://www.linkedin.com/posts/sharmila-s22_50dayslearningchallenge-day1-featurepreneur-activity-6769282703654309888-AVan
+Phase 2:
+	Keep a separate table for Name and connect with entry table
+-----------------/
+
+
+Send a message to bc212
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

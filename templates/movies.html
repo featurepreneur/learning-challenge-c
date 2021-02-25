@@ -1,0 +1,45 @@
+ {%extends 'base.html'%}
+
+ {% block head%}
+
+<div class = "container d-flex justify-content-center"> 
+  <div class="card  " style="transform: none; width:30rem ;transition:none;" >
+  <div class="card-body">
+ 
+    <a class="btn rounded-circle "  style="float: left; margin-top:0% ;" href="/crowdengine/pre?page={{name}}"> <img src={{url_for('static',filename="/icons/caret-left-fill.svg")}} style="width : 40px; height : 40px"></a>
+    <a class="btn rounded-circle" style="float: right; margin-top:0%; margin-right: 0%;" href= "/crowdengine/next?page={{name}}" > <img src={{url_for('static',filename="/icons/caret-right-fill.svg")}} style="width : 40px; height : 40px"></a>
+     
+  <br><br><br>
+         
+          
+          <form action='/crowdengine/write' method="POST"  >
+              <legend class="card-title d-flex justify-content-center"><strong>{{name}}</strong></legend>
+              </br>
+  
+              
+              <input type="hidden" name="name" value="{{name}}">
+  
+              <div class="form-group ">
+                <label  for=>Score Validation</label>
+                <input type="number" class="form-control " id="moviescount"  name="score" placeholder="Enter  Score">
+                
+              </div>
+            
+            
+              
+        </br>
+             
+             <center> <button type="submit" class="btn btn-success">Submit</button></center>
+                
+            </form>
+          
+         
+         
+          </div>      
+     
+</div>
+
+</div>
+
+  
+    {%endblock%}
