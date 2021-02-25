@@ -11,7 +11,14 @@
      
   <br><br><br>
          
-          
+          <div>
+            {%for i in data%}
+              <p>
+                {{i.content}}
+              </p>
+            {%endfor%}
+          </div>
+
           <form action='/crowdengine/write' method="POST"  >
               <legend class="card-title d-flex justify-content-center"><strong>{{name}}</strong></legend>
               </br>

@@ -30,10 +30,8 @@ def pyhackons():
 
 @app.route('/crowdengine/<string:name>')
 def movie_name(name):
-    
-    if name not in actname:
-        return render_template('error.html',error="Name Not Found")
-    return render_template('movies.html' ,name = name)
+    data=Learning.find()
+    return render_template('movies.html' ,name = name, data=data)
 
 @app.route('/crowdengine/pre/')
 def pre():
